@@ -21,6 +21,40 @@ body {
     grid-template-rows: minmax(25%, auto) repeat(5, 100px);
     width: 40%;
     margin: 0 auto;
+    max-width: 600px;
+}
+
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .calculator-grid {
+        width: 80%; /* 在小屏幕上，宽度占据80% */
+        grid-template-columns: repeat(4, 1fr); /* 让按钮占满整个宽度 */
+        grid-template-rows: repeat(6, 100px); /* 6行，调整按钮高度 */
+    }
+
+    .calculator-grid > button {
+        font-size: 1.5rem; /* 在移动端上减小按钮字体 */
+    }
+
+    .output .current-operand {
+        font-size: 2rem; /* 在移动端减小显示区域字体 */
+    }
+}
+
+/* 小屏幕（如手机）专用 */
+@media (max-width: 480px) {
+    .calculator-grid {
+        width: 90%; /* 再小一点的屏幕上，宽度占据90% */
+    }
+
+    .calculator-grid > button {
+        font-size: 1.2rem; /* 再减小字体以适应屏幕 */
+    }
+
+    .output .current-operand {
+        font-size: 1.8rem; /* 调整显示区域字体 */
+    }
 }
 
 .calculator-grid > button {
@@ -46,7 +80,7 @@ body {
     align-items: flex-end;
     justify-content: space-around;
     flex-direction: column;
-    padding: 10px;
+    padding: 15px;
     word-wrap: break-word;
     word-break: break-all;
 }
