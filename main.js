@@ -59,7 +59,7 @@ function Delete() {
 }
 
 function AllClear() {
-    values_input.current_data = []
+    values_input.current_data = ['0']
     values_input.previous_data = ['0']
     RenderCurrentOperand(values_input.current_data.join(''))
     RenderPreviousOperand(values_input.previous_data.join(''))
